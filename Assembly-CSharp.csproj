@@ -36,9 +36,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
-     <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
-     <None Include="Assets\StarSparrow\UpgradeHDRP\UpgradeHDRP.txt" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Prefabs\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+     <None Include="Assets\Prefabs\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
+     <None Include="Assets\Prefabs\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Prefabs\StarSparrow\UpgradeHDRP\UpgradeHDRP.txt" />
+     <None Include="Assets\Prefabs\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\Prefabs\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Prefabs\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -644,10 +658,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{f824997e-3481-7e3c-9e07-b360fcafc03c}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
