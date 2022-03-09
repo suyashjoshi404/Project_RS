@@ -36,7 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\Editor\ReadmeStarSparrowEditor.cs" />
+     <Compile Include="Assets\Prefabs\StarSparrow\Readme\Readme Files\Scripts\Editor\ReadmeStarSparrowEditor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -675,10 +675,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{f824997e-3481-7e3c-9e07-b360fcafc03c}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{b5021e0a-cfa4-7fe7-13ce-97fb3969e7f4}</Project>
       <Name>Assembly-CSharp</Name>
