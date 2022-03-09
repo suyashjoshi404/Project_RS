@@ -46,6 +46,7 @@
      <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
      <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
      <Compile Include="Assets\Prefabs\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <None Include="Assets\Prefabs\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Prefabs\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Prefabs\StarSparrow\UpgradeHDRP\UpgradeHDRP.txt" />
