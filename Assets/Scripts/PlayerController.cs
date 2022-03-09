@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 10f;
+    [SerializeField] float positionPitchFactor = 10f;
+    [SerializeField] float controlPitchFactor = 10f;
+    [SerializeField] float positionYawFactor = 10f;
+    [SerializeField] float controlRollFactor =10f;
+
+    float xThrow,yThrow;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +28,8 @@ public class PlayerController : MonoBehaviour
 
     void processMovement()
     {
-        float xThrow = Input.GetAxis("Horizontal");
-        float yThrow = Input.GetAxis("Vertical");
+        xThrow = Input.GetAxis("Horizontal");
+        yThrow = Input.GetAxis("Vertical");
 
         float xOffset = xThrow * Time.deltaTime * controlSpeed;
         float xRawPosition = transform.localPosition.x + xOffset;
@@ -38,6 +44,13 @@ public class PlayerController : MonoBehaviour
     
     void processRotation()
     {
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControl = yThrow *controlPitchFactor;
+
+        float pitch = pitchDueToPosition + pitchDueToControl;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor;
         
+        transform.localRotation = Quaternion.Euler(pitch ,yaw , roll);
     }
 }
