@@ -1,16 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("General Settings for Player Ship")]
+    [Tooltip("Controlling Speed of Player Ship")]
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 10f;
+
+    [Header("Screen Position Based Tuning")]
     [SerializeField] float positionPitchFactor = 10f;
-    [SerializeField] float controlPitchFactor = 10f;
     [SerializeField] float positionYawFactor = 10f;
+
+    [Header("Player Input Based Tuning")]
+    [SerializeField] float controlPitchFactor = 10f;
     [SerializeField] float controlRollFactor =10f;
+    [SerializeField] GameObject[] lasers;
 
     float xThrow,yThrow;
     // Start is called before the first frame update
@@ -24,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         processMovement();
         processRotation();
+        processFiring();
     }
 
     void processMovement()
@@ -52,5 +61,26 @@ public class PlayerController : MonoBehaviour
         float roll = xThrow * controlRollFactor;
         
         transform.localRotation = Quaternion.Euler(pitch ,yaw , roll);
+    }
+
+    void processFiring()
+    {
+        if(Input.GetButton("Fire1"))
+        {
+            SetActiveLasers(true);
+        }
+        else
+        {
+            SetActiveLasers(false);
+        }
+    }
+
+    void SetActiveLasers(bool isActive)
+    {
+        foreach(GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+           emissionModule.enabled = isActive;
+        }
     }
 }

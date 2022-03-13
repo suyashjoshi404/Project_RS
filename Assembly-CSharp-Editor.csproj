@@ -36,7 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefabs\StarSparrow\Readme\Readme Files\Scripts\Editor\ReadmeStarSparrowEditor.cs" />
+     <Compile Include="Assets\Misc\StarSparrow\Readme\Readme Files\Scripts\Editor\ReadmeStarSparrowEditor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
