@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = 10f;
     [SerializeField] float positionYawFactor = 10f;
     [SerializeField] float controlRollFactor =10f;
+    [SerializeField] GameObject[] lasers;
 
     float xThrow,yThrow;
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         processMovement();
         processRotation();
+        processFiring();
     }
 
     void processMovement()
@@ -52,5 +55,33 @@ public class PlayerController : MonoBehaviour
         float roll = xThrow * controlRollFactor;
         
         transform.localRotation = Quaternion.Euler(pitch ,yaw , roll);
+    }
+
+    void processFiring()
+    {
+        if(Input.GetButton("Fire1"))
+        {
+            ActivateLasers();
+        }
+        else
+        {
+            DeactivateLasers();
+        }
+    }
+
+    void DeactivateLasers()
+    {
+        foreach(GameObject laser in lasers)
+        {
+            laser.SetActive(false);
+        };
+    }
+
+    void ActivateLasers()
+    {
+        foreach(GameObject laser in lasers)
+        {
+            laser.SetActive(true);
+        }
     }
 }
