@@ -41,12 +41,14 @@
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
      <Compile Include="Assets\Misc\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+     <Compile Include="Assets\Scripts\CollisionHandler.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
      <Compile Include="Assets\Misc\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Scripts\EnemyCollision.cs" />
      <None Include="Assets\Misc\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Misc\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Misc\StarSparrow\UpgradeHDRP\UpgradeHDRP.txt" />
