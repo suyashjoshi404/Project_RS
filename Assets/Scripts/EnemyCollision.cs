@@ -6,14 +6,33 @@ public class EnemyCollision : MonoBehaviour
 {
     [SerializeField] GameObject DeathVFX;
     [SerializeField] Transform ParentObject;
+    ScoreBoard scoreBoard;
+    [SerializeField] int scorePerHit = 10;
 
-    void OnParticleCollision(GameObject other) 
+    void Start()
+    {
+        //using FindObjectOfType<>() to find data of type ScoreBoard and storing it in scoreBoard
+        scoreBoard = FindObjectOfType<ScoreBoard>();
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        ProccessScore();
+        ProccessKillEnemy();
+    }
+
+    private void ProccessKillEnemy()
     {
         //remember to turn on play on awake
         //this means it will play the moment its brought into existence
-        Debug.Log($"{this.name} is hit by {other.gameObject.name}");
-        GameObject vfx = Instantiate(DeathVFX,transform.position,Quaternion.identity);
-        vfx.transform.parent = ParentObject;   
+        GameObject vfx = Instantiate(DeathVFX, transform.position, Quaternion.identity);
+        vfx.transform.parent = ParentObject;
         Destroy(gameObject);
+    }
+
+    private void ProccessScore()
+    {
+        //calling function ScoreCount from ScoreBoard Script and incrementing score
+        scoreBoard.ScoreCount(scorePerHit);
     }
 }
